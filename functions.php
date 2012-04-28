@@ -28,7 +28,7 @@ if (!function_exists('theme_footer_desc')) {
 
 if (!function_exists('theme_logo_url')) {
   function theme_logo_url($echo_return = true) {
-    $r = get_bloginfo( 'template_url' ) . "/images/logo.png";
+    $r = get_bloginfo( 'stylesheet_directory' ) . "/images/logo.png";
     if ($echo_return == true) { echo $r; } else { return $r; }
   }
 }
