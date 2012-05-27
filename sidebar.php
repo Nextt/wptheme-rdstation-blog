@@ -12,6 +12,7 @@
 				<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 				<a href="http://feeds.feedburner.com/<?php theme_webprofile_feedburner(); ?>" class="rss_icon" target="_blank">Feed RSS</a>
 				<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?php theme_webprofile_facebook(); ?>&amp;width=240&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=285" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:285px; margin: 0 0 30px 30px; background: #fff;" allowTransparency="true"></iframe>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/CompanyProfile" data-id="<?php theme_webprofile_linkedin_id(); ?>" data-format="inline"></script>
 			</div> <!-- widget #subscribe -->
 
 			<div id="highlights" class="widget-area widget-sidebar">

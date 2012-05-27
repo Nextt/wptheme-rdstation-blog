@@ -118,13 +118,15 @@ footer{ display: block; height: 280px; margin: 0 0 -280px 0; }
 body .author, body .more{ font-size: 11px; font-style: italic; }
 body .categories, body .tags{ font-size: 11px; }
 .twitter-follow-button{ display: block; margin: 0 0 0 30px; }
-.rss_icon{ display: block; height: 24px; line-height: 24px; text-indent: 30px; background: url(images/sprite.png) -72px -109px no-repeat; }
-.facebook_icon{ background: url(images/sprite.png) 0 -85px; }
-.facebook_icon:hover{ background: url(images/sprite.png) 0 -109px; }
-.twitter_icon{ background: url(images/sprite.png) -24px -85px; }
-.twitter_icon:hover{ background: url(images/sprite.png) -24px -109px; }
-.email_icon{ background: url(images/sprite.png) -48px -85px; }
-.email_icon:hover{ background: url(images/sprite.png) -48px -109px; }
+.rss_icon{ display: block; height: 24px; line-height: 24px; text-indent: 30px; background: url(images/sprite.png) -142px -109px no-repeat; }
+.linkedin_icon{ background: url(images/sprite.png) -46px -85px; }
+.linkedin_icon:hover{ background: url(images/sprite.png) -46px -109px; }
+.facebook_icon{ background: url(images/sprite.png) -70px -85px; }
+.facebook_icon:hover{ background: url(images/sprite.png) -70px -109px; }
+.twitter_icon{ background: url(images/sprite.png) -94px -85px; }
+.twitter_icon:hover{ background: url(images/sprite.png) -94px -109px; }
+.email_icon{ background: url(images/sprite.png) -118px -85px; }
+.email_icon:hover{ background: url(images/sprite.png) -118px -109px; }
 .emailthis_button { font-size: 11px; line-height: 14px; }
 
 /* Tab navigation */
