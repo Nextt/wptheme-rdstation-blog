@@ -3,73 +3,80 @@
 require_once ( get_template_directory() . '/theme-options.php' );
 
 if (!function_exists('get_theme_option')) {
-  function get_theme_option($option = '', $echo_return = true) {
+  function get_theme_option($option = '', $_echo = true) {
     $options = get_option('rd-mkt_theme_options');
     $r = $options[$option];
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    if ($_echo) { echo $r; } else { return $r; }
   }
 }
 
 if (!function_exists('theme_logo_url')) {
-  function theme_logo_url($echo_return = true) {
-    get_theme_option('logo_url', $echo_return);
+  function theme_logo_url($_echo = true) {
+    get_theme_option('logo_url', $_echo);
   }
 }
 
 if (!function_exists('theme_logo_link')) {
-  function theme_logo_link($echo_return = true) {
-    get_theme_option('logo_link', $echo_return);
+  function theme_logo_link($_echo = true) {
+    get_theme_option('logo_link', $_echo);
   }
 }
 
 if (!function_exists('theme_header_title')) {
-  function theme_header_title($echo_return = true) {
+  function theme_header_title($_echo = true) {
     // maybe use bloginfo( 'name' );
-    get_theme_option('header_title', $echo_return);
+    get_theme_option('header_title', $_echo);
   }
 }
 
 if (!function_exists('theme_header_desc')) {
-  function theme_header_desc($echo_return = true) {
+  function theme_header_desc($_echo = true) {
     // maybe use bloginfo( 'description' );
-    get_theme_option('header_desc', $echo_return);
+    get_theme_option('header_desc', $_echo);
   }
 }
 
 if (!function_exists('theme_footer_desc')) {
-  function theme_footer_desc($echo_return = true) {
-    get_theme_option('footer_desc', $echo_return);
+  function theme_footer_desc($_echo = true) {
+    get_theme_option('footer_desc', $_echo);
   }
 }
 
 if (!function_exists('theme_contact_link')) {
-  function theme_contact_link($echo_return = true) {
-    get_theme_option('contact_link', $echo_return);
+  function theme_contact_link($_echo = true) {
+    get_theme_option('contact_link', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_twitter')) {
-  function theme_webprofile_twitter($echo_return = true) {
-    get_theme_option('webprofile_twitter', $echo_return);
+  function theme_webprofile_twitter($_echo = true) {
+    get_theme_option('webprofile_twitter', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_facebook')) {
-  function theme_webprofile_facebook($echo_return = true) {
-    get_theme_option('webprofile_facebook', $echo_return);
+  function theme_webprofile_facebook($_echo = true) {
+    get_theme_option('webprofile_facebook', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_linkedin_id')) {
-  function theme_webprofile_linkedin_id($echo_return = true) {
-    get_theme_option('webprofile_linkedin_id', $echo_return);
+  function theme_webprofile_linkedin_id($_echo = true) {
+    get_theme_option('webprofile_linkedin_id', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_feedburner')) {
-  function theme_webprofile_feedburner($echo_return = true) {
-    get_theme_option('webprofile_feedburner', $echo_return);
+  function theme_webprofile_feedburner($_echo = true) {
+    get_theme_option('webprofile_feedburner', $_echo);
   }
+}
+
+function is_option_setted($option){
+  return !is_string_null_or_empty( get_theme_option($option, false) );
+}
+function is_string_null_or_empty($question){
+  return (!isset($question) || trim($question)==='');
 }
 
 // remove junk from head

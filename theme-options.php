@@ -39,7 +39,7 @@ function theme_options_do_page() {
 				$default_options = array(
 				  'header_title' => 'Tema de Wordpress para aprimorar seu blog',
 				  'header_desc' => 'Tema <em>clean</em>, com ajustes de SEO, engajamento com redes sociais, páginas otimizadas para conversão, etc.',
-				  'footer_desc' => '<p>A Resultados Digitais é uma empresa especializada em <strong>Marketing Digital de resultado para Médias e Pequenas empresas</strong>.</p><p>Através de uma plataforma própria de software, o <a href="http://www.rdstation.com.br/" target="_blank">RD Station</a>, e de serviços de consultoria, ajudamos nossos clientes a gerar mais e melhores visitas e oportunidades (Leads) para seus negócios e a construir um sólido ativo de Marketing Digital.</p><a href="http://resultadosdigitais.com.br/sobre/">→ Clique aqui para conhecer mais</a>.',
+				  'footer_desc' => "<p>A Resultados Digitais é uma empresa especializada em <strong>Marketing Digital de resultado para Médias e Pequenas empresas</strong>.</p><p>Através de uma plataforma própria de software, o <a href='http://www.rdstation.com.br/' target='_blank'>RD Station</a>, e de serviços de consultoria, ajudamos nossos clientes a gerar mais e melhores visitas e oportunidades (Leads) para seus negócios e a construir um sólido ativo de Marketing Digital.</p><a href='http://resultadosdigitais.com.br/sobre/'>→ Clique aqui para conhecer mais</a>.",
 				  'logo_url' => get_bloginfo( 'stylesheet_directory' ) . '/images/logo.png',
 				  'logo_link' => get_bloginfo( 'siteurl' ),
 				  'contact_link' => 'http://resultadosdigitais.com.br/contato/',
@@ -53,14 +53,14 @@ function theme_options_do_page() {
 
 			<table class="form-table">
 
-				<tr valign="top"><th scope="row"><?php _e( 'Logo Image URL', 'wptheme-rd-mkt' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Logo image URL', 'wptheme-rd-mkt' ); ?></th>
 					<td>
 						<input id="rd-mkt_theme_options[logo_url]" class="regular-text" type="text" name="rd-mkt_theme_options[logo_url]" placeholder="<?php esc_attr_e( $default_options['logo_url'] ); ?>" value="<?php esc_attr_e( ($options['options_edited'] != 'true') ? $default_options['logo_url'] : $options['logo_url'] ); ?>" />
-						<label class="description" for="rd-mkt_theme_options[logo_url]"><small><?php _e( 'Company or product logo (360px x 110px)', 'wptheme-rd-mkt' ); ?></small></label>
+						<label class="description" for="rd-mkt_theme_options[logo_url]"><small>360px x 110px</small></label>
 					</td>
 				</tr>
 
-				<tr valign="top"><th scope="row"><?php _e( 'Logo Link', 'wptheme-rd-mkt' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Logo link', 'wptheme-rd-mkt' ); ?></th>
 					<td>
 						<input id="rd-mkt_theme_options[logo_link]" class="regular-text" type="text" name="rd-mkt_theme_options[logo_link]" placeholder="<?php esc_attr_e( $default_options['logo_link'] ); ?>" value="<?php esc_attr_e( ($options['options_edited'] != 'true') ? $default_options['logo_link'] : $options['logo_link'] ); ?>" />
 						<label class="description" for="rd-mkt_theme_options[logo_ink]"><small><?php _e( 'Home link at the logo', 'wptheme-rd-mkt' ); ?></small></label>
@@ -77,14 +77,14 @@ function theme_options_do_page() {
 				<tr valign="top"><th scope="row"><?php _e( 'Blog header description', 'wptheme-rd-mkt' ); ?></th>
 					<td>
 						<input id="rd-mkt_theme_options[header_desc]" class="regular-text" type="text" name="rd-mkt_theme_options[header_desc]" placeholder="<?php esc_attr_e( $default_options['header_desc'] ); ?>" value="<?php esc_attr_e( ($options['options_edited'] != 'true') ? $default_options['header_desc'] : $options['header_desc'] ); ?>" />
-						<label class="description" for="rd-mkt_theme_options[header_desc]"><small><?php _e( 'A more descriptive (but short) text about blog content', 'wptheme-rd-mkt' ); ?></small></label>
+						<label class="description" for="rd-mkt_theme_options[header_desc]"><small><?php _e( 'A more descriptive (but still short) text about blog content', 'wptheme-rd-mkt' ); ?></small></label>
 					</td>
 				</tr>
 
 				<tr valign="top"><th scope="row"><?php _e( 'Blog footer description', 'wptheme-rd-mkt' ); ?></th>
 					<td>
 						<textarea id="rd-mkt_theme_options[footer_desc]" class="large-text" cols="40" rows="5" name="rd-mkt_theme_options[footer_desc]" placeholder="<?php esc_attr_e( $default_options['footer_desc'] ); ?>"><?php echo esc_textarea( ($options['options_edited'] != 'true') ? $default_options['footer_desc'] : $options['footer_desc'] ); ?></textarea>
-						<label class="description" for="rd-mkt_theme_options[footer_desc]"><?php _e( 'An introduction text about the company or product', 'wptheme-rd-mkt' ); ?></label>
+						<label class="description" for="rd-mkt_theme_options[footer_desc]"><small><?php _e( 'An introduction text about the company or product', 'wptheme-rd-mkt' ); ?></small></label>
 					</td>
 				</tr>
 
@@ -100,7 +100,7 @@ function theme_options_do_page() {
 					</td>
 				</tr>
 
-				<tr valign="top"><th scope="row"><?php _e( 'Facebook page slug', 'wptheme-rd-mkt' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Facebook page slug or id', 'wptheme-rd-mkt' ); ?></th>
 					<td>
 						<input id="rd-mkt_theme_options[webprofile_facebook]" class="regular-text" type="text" name="rd-mkt_theme_options[webprofile_facebook]" placeholder="<?php esc_attr_e( $default_options['webprofile_facebook'] ); ?>" value="<?php esc_attr_e( ($options['options_edited'] != 'true') ? $default_options['webprofile_facebook'] : $options['webprofile_facebook'] ); ?>" />
 					</td>
@@ -155,9 +155,9 @@ function theme_options_validate( $input ) {
 	*/
 
 	// Say our input and textarea options must be safe text with the allowed tags for posts
-	$input['header_title'] = wp_filter_post_kses( $input['header_title'] );
-	$input['header_desc'] = wp_filter_post_kses( $input['header_desc'] );
-	$input['footer_desc'] = wp_filter_post_kses( $input['footer_desc'] );
+	//$input['header_title'] = wp_filter_post_kses( $input['header_title'] );
+	//$input['header_desc'] = wp_filter_post_kses( $input['header_desc'] );
+	//$input['footer_desc'] = wp_filter_post_kses( $input['footer_desc'] );
 
 	return $input;
 }

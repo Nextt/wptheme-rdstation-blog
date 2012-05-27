@@ -13,11 +13,11 @@
 				<div>
 					<h3>Contato</h3>
 					<ul class="profiles">
-						<li class="linkedin_icon"><a href="http://www.linkedin.com/company/<?php theme_webprofile_linkedin_id(); ?>" target="_blank"><span>Linkedin</span></a></li>
-						<li class="facebook_icon"><a href="http://www.facebook.com/<?php theme_webprofile_facebook(); ?>" target="_blank"><span>Facebook</span></a></li>
-						<li class="twitter_icon"><a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" target="_blank"><span>Twitter</span></a></li>
-						<li class="email_icon"><a href="<?php theme_contact_link(); ?>"><span>E-mail</span></a></li>
-					</ul>                    
+						<?php if ( is_option_setted('webprofile_linkedin_id') ) { ?><li class="linkedin_icon"><a href="http://www.linkedin.com/company/<?php theme_webprofile_linkedin_id(); ?>" target="_blank"><span>Linkedin</span></a></li><?php } ?>
+						<?php if ( is_option_setted('webprofile_facebook') ) { ?><li class="facebook_icon"><a href="http://www.facebook.com/<?php theme_webprofile_facebook(); ?>" target="_blank"><span>Facebook</span></a></li><?php } ?>
+						<?php if ( is_option_setted('webprofile_twitter') ) { ?><li class="twitter_icon"><a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" target="_blank"><span>Twitter</span></a></li><?php } ?>
+						<?php if ( is_option_setted('contact_link') ) { ?><li class="email_icon"><a href="<?php theme_contact_link(); ?>"><span>E-mail</span></a></li><?php } ?>
+					</ul>
 				</div>
 			<?php endif ?>
 			</div>
