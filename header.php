@@ -22,11 +22,14 @@
 } ?></title>
 
 <meta http-equiv="imagetoolbar" content="no" />
-<meta property="fb:admins" content="<?php theme_webprofile_facebook_pageadmins(); ?>" /> 
-<meta property="fb:page_id" content="<?php theme_webprofile_facebook_pageid(); ?>" />
+<meta property="fb:admins" content="159732357452275" /> 
 <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 	
-<link rel="alternate" type="application/rss+xml" title="Feed RSS" href="http://feeds.feedburner.com/<?php theme_webprofile_feedburner(); ?>" />
+<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
+  <link rel="alternate" type="application/rss+xml" title="Feed RSS" href="http://feeds.feedburner.com/<?php theme_webprofile_feedburner(); ?>" />
+<?php } else { ?>
+  <link rel="alternate" type="application/rss+xml" title="Feed RSS" href="<?php bloginfo('rss2_url'); ?>" />
+<?php } ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -46,7 +49,11 @@
 	<div id="wrapper">
 		<header>
 			<div id="headerlogo">
-        <a href="<?php bloginfo( 'url' ); ?>/" title="Página inicial"><img src="<?php theme_logo_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+        <?php if ( is_option_setted('logo_url') ) { ?>
+          <a href="<?php theme_logo_link(); ?>" title="Página inicial"><img src="<?php theme_logo_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+        <?php } else { ?>
+          <a href="<?php bloginfo( 'siteurl' ); ?>" title="Página inicial"><?php bloginfo( 'name' ); ?></a>
+        <?php } ?>
       </div>
 			<div class="desc">
 				<?php if ( is_home() || is_404() || is_category() || is_tag() || is_search() ) { ?>
@@ -64,12 +71,12 @@
 		</header>
 		<nav>
 			<ul>
-				<li<?php if ( is_home() ) echo( ' class="current_page_item"' ); ?>><a href="<?php bloginfo( 'url' ); ?>/">Blog</a></li>
+				<li<?php if ( is_home() ) echo( ' class="current_page_item"' ); ?>><a href="<?php bloginfo( 'siteurl' ); ?>/">Blog</a></li>
 				<?php wp_list_pages('title_li=&depth=1'); ?>
 			</ul>
 		</nav>
 		<div id="search">
-			<form method="get" action="<?php bloginfo( 'url' ); ?>/">
+			<form method="get" action="<?php bloginfo( 'siteurl' ); ?>/">
 				<input type="text" name="s" placeholder="Buscar" />
 				<input type="submit" value="" />
 			</form>

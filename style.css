@@ -75,16 +75,17 @@ body.author #content > article{ margin-bottom: 10px; }
 #sidebar{ width: 311px; float: right; overflow: hidden; }
 	#sidebar a:hover{ border-bottom: 1px dotted #3e74ad; }
 	#sidebar .widget-sidebar{ background: #efefef; margin: 0 0 20px 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #fff; }
-		#sidebar .widget-sidebar h3{ height: 36px; width: 290px; line-height: 32px; color: #fff; text-transform: uppercase; font-weight: normal; letter-spacing:2px; font-size: 11px; text-indent:15px; background: url(images/sprite.png) 0 -5px; margin: 15px 0 20px -5px; }
+		#sidebar .widget-sidebar h3{ height: 36px; width: 290px; line-height: 32px; color: #fff; text-transform: uppercase; font-weight: normal; letter-spacing:2px; font-size: 11px; text-indent:15px; background: url(images/sprite.png) 0 -5px; margin: 15px 0 15px -5px; }
 		#sidebar .widget-sidebar div { font-size: 11px; line-height: 14px; }
 		#sidebar .widget-sidebar div p { margin: 0 0 8px 0; }
 		#sidebar .widget-sidebar > ul { margin: 0 20px 30px 20px; list-style: none; font-size: 11px; }
 			#sidebar .widget-sidebar > ul ul { margin: 0 0 5px 30px; list-style: disc; font-size: 11px; }
 
 	#sidebar #subscribe{ background: #bbc7d3; }
-		#sidebar #subscribe a{ display: block; margin: 20px 20px 20px 30px; }
+		#sidebar #subscribe > a, #sidebar #subscribe > span, 
+			#sidebar #subscribe > form, #sidebar #subscribe > iframe{ display: block; margin: 10px 20px 5px 30px !important; }
 		#sidebar #subscribe a:hover{ border: none; }
-		#sidebar #subscribe form{ display: block; margin: 20px 20px 20px 30px; overflow: hidden; }
+		#sidebar #subscribe form{ display: block; overflow: hidden; }
 			#sidebar #subscribe form label{ font-size: 12px; }
 			#sidebar #subscribe form input[type=text]{ float: left; height: 20px; line-height: 20px; padding: 0 0 0 5px; width: 215px; color: #666; font-size: 11px; background: url(images/background_input_text.png); margin: 10px 0 0 0; border: none; }
 			#sidebar #subscribe form input[type=submit]{ float: left; height: 20px; width: 22px; background: url(images/background_input_submit.png); margin: 10px 0 0 0; cursor: pointer; }
@@ -117,14 +118,15 @@ footer{ display: block; height: 280px; margin: 0 0 -280px 0; }
 /* Classes */
 body .author, body .more{ font-size: 11px; font-style: italic; }
 body .categories, body .tags{ font-size: 11px; }
-.twitter-follow-button{ display: block; margin: 0 0 0 30px; }
-.rss_icon{ display: block; height: 24px; line-height: 24px; text-indent: 30px; background: url(images/sprite.png) -72px -109px no-repeat; }
-.facebook_icon{ background: url(images/sprite.png) 0 -85px; }
-.facebook_icon:hover{ background: url(images/sprite.png) 0 -109px; }
-.twitter_icon{ background: url(images/sprite.png) -24px -85px; }
-.twitter_icon:hover{ background: url(images/sprite.png) -24px -109px; }
-.email_icon{ background: url(images/sprite.png) -48px -85px; }
-.email_icon:hover{ background: url(images/sprite.png) -48px -109px; }
+.rss_icon{ display: block; height: 24px; line-height: 24px; text-indent: 30px; background: url(images/sprite.png) -142px -109px no-repeat; }
+.linkedin_icon{ background: url(images/sprite.png) -46px -85px; }
+.linkedin_icon:hover{ background: url(images/sprite.png) -46px -109px; }
+.facebook_icon{ background: url(images/sprite.png) -70px -85px; }
+.facebook_icon:hover{ background: url(images/sprite.png) -70px -109px; }
+.twitter_icon{ background: url(images/sprite.png) -94px -85px; }
+.twitter_icon:hover{ background: url(images/sprite.png) -94px -109px; }
+.email_icon{ background: url(images/sprite.png) -118px -85px; }
+.email_icon:hover{ background: url(images/sprite.png) -118px -109px; }
 .emailthis_button { font-size: 11px; line-height: 14px; }
 
 /* Tab navigation */

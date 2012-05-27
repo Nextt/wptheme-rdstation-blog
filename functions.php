@@ -1,80 +1,83 @@
 <?php
 
-if (!function_exists('theme_header_title')) {
-  function theme_header_title($echo_return = true) {
-    $r = "Tema de Wordpress para aprimorar seu blog";
-    // bloginfo( 'name' );
-    if ($echo_return == true) { echo $r; } else { return $r; }
-  }
-}
+require_once ( get_template_directory() . '/theme-options.php' );
 
-if (!function_exists('theme_header_desc')) {
-  function theme_header_desc($echo_return = true) {
-    $r = "Tema <em>clean</em>, ajustes de SEO, engajamento com redes sociais, páginas otimizadas para conversão, etc.";
-    // bloginfo( 'description' );
-    if ($echo_return == true) { echo $r; } else { return $r; }
-  }
-}
-
-if (!function_exists('theme_footer_desc')) {
-  function theme_footer_desc($echo_return = true) {
-    $r = "<p>A Resultados Digitais é uma empresa especializada em <strong>Marketing Digital de resultado para Médias e Pequenas empresas</strong>.</p>
-          <p>Através de uma plataforma própria de software, o <a href='http://www.rdstation.com.br/' target='_blank'>RD Station</a>, e de serviços de consultoria, ajudamos nossos clientes a gerar mais e melhores visitas e oportunidades (Leads) para seus negócios e a construir um sólido ativo de Marketing Digital.</p>
-          <a href='http://resultadosdigitais.com.br/sobre/'>→ Clique aqui para conhecer mais</a>.";
-    // bloginfo( 'description' );
-    if ($echo_return == true) { echo $r; } else { return $r; }
+if (!function_exists('get_theme_option')) {
+  function get_theme_option($option = '', $_echo = true) {
+    $options = get_option('rd-mkt_theme_options');
+    $r = $options[$option];
+    if ($_echo) { echo $r; } else { return $r; }
   }
 }
 
 if (!function_exists('theme_logo_url')) {
-  function theme_logo_url($echo_return = true) {
-    $r = get_bloginfo( 'stylesheet_directory' ) . "/images/logo.png";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+  function theme_logo_url($_echo = true) {
+    get_theme_option('logo_url', $_echo);
+  }
+}
+
+if (!function_exists('theme_logo_link')) {
+  function theme_logo_link($_echo = true) {
+    get_theme_option('logo_link', $_echo);
+  }
+}
+
+if (!function_exists('theme_header_title')) {
+  function theme_header_title($_echo = true) {
+    // maybe use bloginfo( 'name' );
+    get_theme_option('header_title', $_echo);
+  }
+}
+
+if (!function_exists('theme_header_desc')) {
+  function theme_header_desc($_echo = true) {
+    // maybe use bloginfo( 'description' );
+    get_theme_option('header_desc', $_echo);
+  }
+}
+
+if (!function_exists('theme_footer_desc')) {
+  function theme_footer_desc($_echo = true) {
+    get_theme_option('footer_desc', $_echo);
   }
 }
 
 if (!function_exists('theme_contact_link')) {
-  function theme_contact_link($echo_return = true) {
-    $r = "http://resultadosdigitais.com.br/contato/";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+  function theme_contact_link($_echo = true) {
+    get_theme_option('contact_link', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_twitter')) {
-  function theme_webprofile_twitter($echo_return = true) {
-    $r = "resdigitais";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+  function theme_webprofile_twitter($_echo = true) {
+    get_theme_option('webprofile_twitter', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_facebook')) {
-  function theme_webprofile_facebook($echo_return = true) {
-    $r = "resultadosdigitais";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+  function theme_webprofile_facebook($_echo = true) {
+    get_theme_option('webprofile_facebook', $_echo);
   }
 }
-if (!function_exists('theme_webprofile_facebook_pageid')) {
-  function theme_webprofile_facebook_pageid($echo_return = true) {
-    $r = "193036440715468";
-    if ($echo_return == true) { echo $r; } else { return $r; }
-  }
-}
-if (!function_exists('theme_webprofile_facebook_pageadmins')) {
-  function theme_webprofile_facebook_pageadmins($echo_return = true) {
-    $r = "866105373,1204665048";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+
+if (!function_exists('theme_webprofile_linkedin_id')) {
+  function theme_webprofile_linkedin_id($_echo = true) {
+    get_theme_option('webprofile_linkedin_id', $_echo);
   }
 }
 
 if (!function_exists('theme_webprofile_feedburner')) {
-  function theme_webprofile_feedburner($echo_return = true) {
-    $r = "ResDigitais";
-    if ($echo_return == true) { echo $r; } else { return $r; }
+  function theme_webprofile_feedburner($_echo = true) {
+    get_theme_option('webprofile_feedburner', $_echo);
   }
 }
 
-// ------------ Stop editing below this line ------------
-// ------------------------------------------------------
+function is_option_setted($option){
+  return !is_string_null_or_empty( get_theme_option($option, false) );
+}
+function is_string_null_or_empty($question){
+  return (!isset($question) || trim($question)==='');
+}
 
 // remove junk from head
 remove_action('wp_head', 'rsd_link');
