@@ -13,7 +13,7 @@
 				<div>
 					<h3>Contato</h3>
 					<ul class="profiles">
-						<li class="linkedin_icon"><a href="http://www.linkedin.com/<?php theme_webprofile_linkedin_url(); ?>" target="_blank"><span>Linkedin</span></a></li>
+						<li class="linkedin_icon"><a href="http://www.linkedin.com/company/<?php theme_webprofile_linkedin_id(); ?>" target="_blank"><span>Linkedin</span></a></li>
 						<li class="facebook_icon"><a href="http://www.facebook.com/<?php theme_webprofile_facebook(); ?>" target="_blank"><span>Facebook</span></a></li>
 						<li class="twitter_icon"><a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" target="_blank"><span>Twitter</span></a></li>
 						<li class="email_icon"><a href="<?php theme_contact_link(); ?>"><span>E-mail</span></a></li>

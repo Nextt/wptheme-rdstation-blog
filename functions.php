@@ -2,131 +2,75 @@
 
 require_once ( get_template_directory() . '/theme-options.php' );
 
+if (!function_exists('get_theme_option')) {
+  function get_theme_option($option = '', $echo_return = true) {
+    $options = get_option('rd-mkt_theme_options');
+    $r = $options[$option];
+    if ($echo_return == true) { echo $r; } else { return $r; }
+  }
+}
+
 if (!function_exists('theme_logo_url')) {
   function theme_logo_url($echo_return = true) {
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['logo_url'];
-  if ($r == '' && !($options['options_edited'] == 'true')) {
-    $r = get_bloginfo( 'stylesheet_directory' ) . "/images/logo.png";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('logo_url', $echo_return);
   }
 }
 
 if (!function_exists('theme_logo_link')) {
   function theme_logo_link($echo_return = true) {
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['logo_link'];
-  if ($r == '' && !($options['options_edited'] == 'true')) {
-    $r = get_bloginfo( 'siteurl' );
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('logo_link', $echo_return);
   }
 }
 
 if (!function_exists('theme_header_title')) {
   function theme_header_title($echo_return = true) {
-    // maybe get bloginfo( 'name' );
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['header_title'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "Tema de Wordpress para aprimorar seu blog";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    // maybe use bloginfo( 'name' );
+    get_theme_option('header_title', $echo_return);
   }
 }
 
 if (!function_exists('theme_header_desc')) {
   function theme_header_desc($echo_return = true) {
-    // maybe get bloginfo( 'description' );
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['header_desc'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "Tema <em>clean</em>, ajustes de SEO, engajamento com redes sociais, páginas otimizadas para conversão, etc.";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    // maybe use bloginfo( 'description' );
+    get_theme_option('header_desc', $echo_return);
   }
 }
 
 if (!function_exists('theme_footer_desc')) {
   function theme_footer_desc($echo_return = true) {
-  	$options = get_option('rd-mkt_theme_options');
-    $r = $options['footer_desc'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "<p>A Resultados Digitais é uma empresa especializada em <strong>Marketing Digital de resultado para Médias e Pequenas empresas</strong>.</p><p>Através de uma plataforma própria de software, o <a href='http://www.rdstation.com.br/' target='_blank'>RD Station</a>, e de serviços de consultoria, ajudamos nossos clientes a gerar mais e melhores visitas e oportunidades (Leads) para seus negócios e a construir um sólido ativo de Marketing Digital.</p><a href='http://resultadosdigitais.com.br/sobre/'>→ Clique aqui para conhecer mais</a>.";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('footer_desc', $echo_return);
   }
 }
 
 if (!function_exists('theme_contact_link')) {
   function theme_contact_link($echo_return = true) {
-  	$options = get_option('rd-mkt_theme_options');
-    $r = $options['contact_link'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "http://resultadosdigitais.com.br/contato/";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('contact_link', $echo_return);
   }
 }
 
 if (!function_exists('theme_webprofile_twitter')) {
   function theme_webprofile_twitter($echo_return = true) {
-  	$options = get_option('rd-mkt_theme_options');
-    $r = $options['webprofile_twitter'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "resdigitais";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('webprofile_twitter', $echo_return);
   }
 }
 
 if (!function_exists('theme_webprofile_facebook')) {
   function theme_webprofile_facebook($echo_return = true) {
-  	$options = get_option('rd-mkt_theme_options');
-    $r = $options['webprofile_facebook'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "resultadosdigitais";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('webprofile_facebook', $echo_return);
   }
 }
 
 if (!function_exists('theme_webprofile_linkedin_id')) {
   function theme_webprofile_linkedin_id($echo_return = true) {
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['webprofile_linkedin_id'];
-  if ($r == '' && !($options['options_edited'] == 'true')) {
-    $r = "";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
-  }
-}
-
-if (!function_exists('theme_webprofile_linkedin_url')) {
-  function theme_webprofile_linkedin_url($echo_return = true) {
-    $options = get_option('rd-mkt_theme_options');
-    $r = $options['webprofile_linkedin_url'];
-  if ($r == '' && !($options['options_edited'] == 'true')) {
-    $r = "";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('webprofile_linkedin_id', $echo_return);
   }
 }
 
 if (!function_exists('theme_webprofile_feedburner')) {
   function theme_webprofile_feedburner($echo_return = true) {
-  	$options = get_option('rd-mkt_theme_options');
-    $r = $options['webprofile_feedburner'];
-	if ($r == '' && !($options['options_edited'] == 'true')) {
-		$r = "ResDigitais";
-    }
-    if ($echo_return == true) { echo $r; } else { return $r; }
+    get_theme_option('webprofile_feedburner', $echo_return);
   }
 }
-
-// ------------ Stop editing below this line ------------
-// ------------------------------------------------------
 
 // remove junk from head
 remove_action('wp_head', 'rsd_link');
