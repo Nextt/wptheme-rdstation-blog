@@ -10,6 +10,7 @@
 					<h3>Clientes atuais</h3>
 					<img src="<?php bloginfo( 'template_url' ); ?>/images/marcas.png" alt="Nossos clientes" />    
 				</div>
+			<?php endif ?>
 				<div>
 					<h3>Contato</h3>
 					<ul class="profiles">
@@ -19,7 +20,6 @@
 						<?php if ( is_option_setted('contact_link') ) { ?><li class="email_icon"><a href="<?php theme_contact_link(); ?>"><span>E-mail</span></a></li><?php } ?>
 					</ul>
 				</div>
-			<?php endif ?>
 			</div>
 			<div class="clear"></div><hr />
 			<div id="copyright">Copyright &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.</div>
