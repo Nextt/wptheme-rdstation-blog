@@ -47,34 +47,15 @@
 
   <div id="bg-stripe"></div>
 	<div id="wrapper">
-		<header>
-			<div id="headerlogo">
-        <?php if ( is_option_setted('logo_url') ) { ?>
-          <a href="<?php theme_logo_link(); ?>" title="Página inicial"><img src="<?php theme_logo_url(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
-        <?php } else { ?>
-          <a href="<?php bloginfo( 'siteurl' ); ?>" title="Página inicial"><?php bloginfo( 'name' ); ?></a>
-        <?php } ?>
-      </div>
-			<div class="desc">
-				<?php if ( is_home() || is_404() || is_category() || is_tag() || is_search() ) { ?>
-				  <h1 id="headertitle"><?php theme_header_title(); ?></h1>
-				<?php } else { ?>
-				  <p id="headertitle"><?php theme_header_title(); ?></p>
-				<?php } ?>
-
-        <?php if ( is_home() || is_404() || is_search() ) { ?>
-          <h2 id="headerdesc"><?php theme_header_desc(); ?></h2>
-        <?php } else { ?>
-          <p id="headerdesc"><?php theme_header_desc(); ?></p>
-        <?php } ?>
-			</div>
-		</header>
-		<nav>
+		<header id="header_menu">
+			<nav>
+			<img src="<?php bloginfo( 'template_url' ); ?>/images/logo-rdstation.png" />
 			<ul>
-				<li<?php if ( is_home() ) echo( ' class="current_page_item"' ); ?>><a href="<?php bloginfo( 'siteurl' ); ?>/">Blog</a></li>
 				<?php wp_list_pages('title_li=&depth=1'); ?>
 			</ul>
 		</nav>
+		</header>
+		
 		<div id="search">
 			<form method="get" action="<?php bloginfo( 'siteurl' ); ?>/">
 				<input type="text" name="s" placeholder="Buscar" />

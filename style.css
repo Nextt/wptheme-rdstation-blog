@@ -25,6 +25,22 @@ header{ display: block; height: 115px; width: 100%; overflow: hidden; }
 		header > div.desc #headertitle{ font-weight: bold; font-size: 13px; }
 		header > div.desc #headerdesc{ font-style: italic; font-weight: normal; font-size: 13px; }
 
+/* header RD Station */
+
+#header_menu {margin-top: -70px;}
+#header_menu nav { width: auto;}
+#header_menu nav img { margin-top: 10px;}
+#header_menu nav ul { float: right; margin-top: 8px;}
+#header_menu nav ul li:hover { background: none; margin-top: 2px;}
+#header_menu nav > ul li.current_page_item { background: none;}
+#header_menu nav ul li a { color: #ffffff; font-size: 13px;}
+#header_menu nav > ul li.current_page_item a { margin-top: 12px;}
+#header_menu nav > ul li.current_page_item a:hover { margin-top: 12px;}
+#header_menu nav ul li a:hover { color: #ffffff;}
+#bg-stripe { background: url(images/bg-header.png); min-height: 77px;}
+
+
+
 nav{ display: block; width: 700px; height: 35px; }
 	nav > ul{ list-style: none; overflow: hidden; }
 		nav > ul li{ display: block; height: 35px; padding: 0 10px; margin: 0 1px 0 0; float: left; -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
@@ -110,7 +126,7 @@ footer{ display: block; height: 280px; margin: 0 0 -280px 0; }
 	footer hr{ border-bottom: 1px solid #ccc; margin: 10px 0 6px 0; }
 	footer #copyright { text-align:center; font-size: 10px; }
 
-#bg-stripe{ position: relative; width: 100%; height: 150px; margin: 0 0 -150px 0; background: #25578b url(images/background_website.png) repeat-x; z-index: 0; }
+/*  #bg-stripe{ position: relative; width: 100%; height: 150px; margin: 0 0 -150px 0; background: #25578b url(images/background_website.png) repeat-x; z-index: 0; }  */
 #footer-stripe { position: relative; width: 100%; height: 280px; background: #ebebeb url(images/background_footer.png) repeat-x 0 0; z-index: 1; }
 
 #wrapper{ position: relative; width: 978px; margin: 0 auto; z-index: 100; }
