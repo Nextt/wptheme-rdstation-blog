@@ -1,32 +1,28 @@
-		<div class="clear"></div>
-		<footer>
-			<header><span><?php bloginfo( 'name' ); ?></span></header>
-			<div id="description">
-				<?php theme_footer_desc(); ?>
-			</div>
-			<div id="links">
-			<?php if ( ! dynamic_sidebar( 'Footer' ) ) : ?>
-				<div>
-					<h3>Clientes atuais</h3>
-					<img src="<?php bloginfo( 'template_url' ); ?>/images/marcas.png" alt="Nossos clientes" />    
-				</div>
-			<?php endif ?>
-				<div>
-					<h3>Contato</h3>
-					<ul class="profiles">
-						<?php if ( is_option_setted('webprofile_linkedin_id') ) { ?><li class="linkedin_icon"><a href="http://www.linkedin.com/company/<?php theme_webprofile_linkedin_id(); ?>" target="_blank"><span>Linkedin</span></a></li><?php } ?>
-						<?php if ( is_option_setted('webprofile_facebook') ) { ?><li class="facebook_icon"><a href="http://www.facebook.com/<?php theme_webprofile_facebook(); ?>" target="_blank"><span>Facebook</span></a></li><?php } ?>
-						<?php if ( is_option_setted('webprofile_twitter') ) { ?><li class="twitter_icon"><a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" target="_blank"><span>Twitter</span></a></li><?php } ?>
-						<?php if ( is_option_setted('contact_link') ) { ?><li class="email_icon"><a href="<?php theme_contact_link(); ?>"><span>E-mail</span></a></li><?php } ?>
-					</ul>
-				</div>
-			</div>
-			<div class="clear"></div><hr />
-			<div id="copyright">Copyright &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.</div>
-		</footer>
+</div>
+<footer>
+      <div class="wrapper">
+        <div class="row">
+            <a id="return-top" href="#">Topo</a>
+            <img src="<?php bloginfo( 'template_url' ); ?>/images/logo-footer.png" alt="Um produto Resultados Digitais"  class="logo-footer" />
+            <div class="redes-sociais">
+              <a id="twitter" href="http://twitter.com/ResDigitais" target="_blank" rel="tooltip" data-original-title="@ResDigitais"><span>Twitter</span></a>
+              <a id="rss" href="http://feeds.feedburner.com/ResultadosDigitais" target="_blank" rel="tooltip" data-original-title="Assine nosso feed"><span>RSS</span></a>
+              <a id="facebook" href="http://www.facebook.com/ResultadosDigitais" target="_blank" rel="tooltip" data-original-title="facebook.com/ResultadosDigitais"><span>Facebook</span></a>
+              <a id="googleplus" href="http://plus.google.com/108141685269689088342" target="_blank" rel="publisher" data-original-title="Perfil no Google+"><span>Google+</span></a>
+            </div>
+        </div>
+        <div class="row">
+          <div id="descricao-footer" class="box-footer">
+			<p>A Resultados Digitais é uma empresa de referência em Marketing Digital para médias e pequenas empresas no Brasil.<br>
+			Além do RD Station, produzimos muito conteúdo gratuito e educativo em nosso site e no nosso <a href="http://resultadosdigitais.com.br/blog" target="_blank">Blog de Marketing Digital</a>.<br>
+			Para conhecer mais sobre a empresa, visite o nosso <a href="http://resultadosdigitais.com.br" target="_blank">site</a>.</p>
+          </div>
+          <div id="seminarios-footer" class="box-footer">
+            <a href="http://resultadosdigitais.com.br/materiais-educativos/" title="Conheça os materiais educativos da Resultados Digitais" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/images/materiais-educativos.png" alt="Ilustracao Materiais Educativos"  /><b>Conheça os materiais educativos da Resultados Digitais</b></a>
+          </div>
+        </div>
+      </div>
+    </footer>
 	</div><!-- #wrapper -->
-	<div id="footer-stripe"></div>
-
-<?php wp_footer(); ?>
 </body>
 </html>

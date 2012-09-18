@@ -1,4 +1,4 @@
-				<aside class="social<?php if ( is_single() || is_page() ) { echo "_floating"; } ?>">
+				<div class="social<?php if ( is_single() || is_page() ) { echo "_floating"; } ?>">
 				<?php if ( function_exists( 'btn_vert_tweet' ) ) : ?>
 					<?php btn_vert_tweet(); ?><br />
 					<div class="vspace"></div>
@@ -15,4 +15,4 @@
 					<?php email_link(); ?><br />
 					<div class="vspace"></div>
 				<?php endif; ?>
-				</aside>
+				</div>

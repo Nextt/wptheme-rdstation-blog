@@ -230,9 +230,9 @@ function gplusone_scrpit() {
   echo '<script type="text/javascript">
 window.___gcfg = {lang: "pt-BR"};
 (function() {
-	var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
-	po.src = "https://apis.google.com/js/plusone.js";
-	var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+  var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+  po.src = "https://apis.google.com/js/plusone.js";
+  var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
 })();
 </script>';
 }
@@ -284,10 +284,10 @@ function get_post_end_banner() {
   return '';
 }
 //function add_postbanner_to_content($content) {
-//	if(is_feed() || is_single()) {
-//		$content .= get_post_end_banner();
-//	}
-//	return $content;
+//  if(is_feed() || is_single()) {
+//    $content .= get_post_end_banner();
+//  }
+//  return $content;
 //}
 //add_filter('the_content', 'add_postbanner_to_content');
 
