@@ -27,11 +27,11 @@ section, aside, header, footer, article{ display: block; } /*Help IE understand 
 .wrapper, #wrapper{ margin: 0 auto; overflow: auto; width: 940px; position: relative; }
 #wrapper {margin-bottom: 100px;}
 #wrapper > header{ height: 75px; overflow: hidden; margin: 0 0 65px 0; width: 940px; }
-#wrapper > header > nav > a{ display: block; float: left; margin: 20px 0 0 0; font-size: 13px; }
+#wrapper > header > nav > a{ display: block; float: left; margin: 20px 0 0 0; }
 #wrapper > header > nav > ul{ display: block; float: right; list-style: none; margin: 29px 20px 0 0; text-align: right; width: 690px; }
 #wrapper > header > nav > ul > li{ display: inline; }
 #wrapper > header > nav > ul > li+li{ margin: 0 0 0 17px; }
-#wrapper > header > nav > ul > li > a{ color: #fff; text-decoration: none; text-transform: uppercase; }
+#wrapper > header > nav > ul > li > a{ color: #fff; text-decoration: none; text-transform: uppercase; font-size: 13px; }
 
 #content{ float: left; width: 540px; }
 
