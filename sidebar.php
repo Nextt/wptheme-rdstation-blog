@@ -21,9 +21,6 @@
 	<?php } else { ?>
 		<a href="<?php bloginfo('rss2_url'); ?>" class="rss_icon" target="_blank">Feed RSS</a>
 	<?php } ?>
-	<?php if ( is_option_setted('webprofile_facebook') ) { ?>
-		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?php theme_webprofile_facebook(); ?>&amp;width=270&amp;height=270&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23f3f2eb&amp;stream=false&amp;header=false&amp;appId=261838613827121" scrolling="no" frameborder="0" style="border:none; background:#fff; overflow:hidden; width:270px; height:270px;" allowTransparency="true"></iframe>
-	<?php } ?>
 	<hr />
 	<?php if ( ! dynamic_sidebar( 'Sidebar' ) ) : ?><?php endif ?>
 

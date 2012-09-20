@@ -82,13 +82,13 @@ footer > .wrapper { position: static; }
 footer {background: url('images/bg-home-content.jpg') no-repeat; background-position: center; padding-bottom: 40px; border-top: 3px solid #AE391E;}
 footer .redes-sociais {float: right;}
 footer .logo-footer {float: left; margin-top: 20px}
-#descricao-footer{background: white; margin-right: 2%;}
+#descricao-footer{background: white;}
 #descricao-footer p {padding: 20px 25px; font-size:12px; line-height:20px}
 #seminarios-footer a {padding: 0px 15px; display: block; text-align: center; font-size: 12px; overflow: auto;}
-#seminarios-footer a b {line-height: 15px; display: inline-block; float: left; width: 130px; margin-top: 60px;}
 #seminarios-footer a img { float: right;}
-footer .box-footer {height: 160px; border-radius: 5px; background: white; width: 49%; float: left; margin-top: 20px;}
+footer .box-footer {height: 204px; border-radius: 5px; background: white; width: 295px; margin-right:20px; float: left; margin-top: 20px;}
 footer .redes-sociais span {display: none;}
+#facebook-widget { padding-top:4px; height: 200px; margin-right: 0;}
 #return-top {margin-top: -22px; margin-left: 0; display: block; background: url('images/bg-volta-topo.png') no-repeat;padding-left: 11px;color: white; text-transform: uppercase; font-size: 9px; line-height: 22px; position: absolute; width: 45px;}
 #twitter {background: url('images/social-sprite.png') 0px 0px no-repeat; height: 26px; width: 25px; display: block; float: left; margin-right: 5px; margin-top: 30px;}
 #twitter:hover{background: url('images/social-sprite.png') 0px -26px no-repeat;}
