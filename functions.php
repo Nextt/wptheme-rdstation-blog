@@ -42,6 +42,12 @@ if (!function_exists('theme_footer_desc')) {
   }
 }
 
+if (!function_exists('theme_sidebar_desc')) {
+  function theme_sidebar_desc($_echo = true) {
+    get_theme_option('sidebar_desc', $_echo);
+  }
+}
+
 if (!function_exists('theme_contact_link')) {
   function theme_contact_link($_echo = true) {
     get_theme_option('contact_link', $_echo);

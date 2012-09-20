@@ -1,8 +1,7 @@
 <aside id="sidebar">
 	<header>
 		<h1>Blog RD Station</h1>
-		<p>O RD Station é uma plataforma de marketing digital destinada a ajudar médias e pequenas empresas a gerar resultados de negócio de maneira incremental e consistente.</p>
-		<a href="http://www.rdstation.com.br/" title="Clique e conheça o RD Station" class="cta-rdstation" target="_blank">Clique e conheça o RD Station</a>
+		<?php if ( is_option_setted('sidebar_desc') ) { theme_sidebar_desc(); } ?>
 	</header>
 	<hr />
 	<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
