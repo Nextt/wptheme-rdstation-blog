@@ -39,7 +39,8 @@ function theme_options_do_page() {
 				$default_options = array(
 				  'header_title' => 'Tema de Wordpress para aprimorar seu blog',
 				  'header_desc' => 'Tema <em>clean</em>, com ajustes de SEO, engajamento com redes sociais, páginas otimizadas para conversão, etc.',
-				  'footer_desc' => "<p>A Resultados Digitais é uma empresa especializada em <strong>Marketing Digital de resultado para Médias e Pequenas empresas</strong>.</p><p>Através de uma plataforma própria de software, o <a href='http://www.rdstation.com.br/' target='_blank'>RD Station</a>, e de serviços de consultoria, ajudamos nossos clientes a gerar mais e melhores visitas e oportunidades (Leads) para seus negócios e a construir um sólido ativo de Marketing Digital.</p><a href='http://resultadosdigitais.com.br/sobre/'>→ Clique aqui para conhecer mais</a>.",
+				  'footer_desc' => '<p>A Resultados Digitais é uma empresa de referência em Marketing Digital para médias e pequenas empresas no Brasil.<br>Além do RD Station, produzimos muito conteúdo gratuito e educativo em nosso site e no nosso <a href="http://resultadosdigitais.com.br/blog" target="_blank">Blog de Marketing Digital</a>.<br>Para conhecer mais sobre a empresa, visite o nosso <a href="http://resultadosdigitais.com.br" target="_blank">site</a>.</p>',
+				  'sidebar_desc' => '<p>O RD Station é uma plataforma de marketing digital destinada a ajudar médias e pequenas empresas a gerar resultados de negócio de maneira incremental e consistente.</p><a href="http://www.rdstation.com.br/" title="Clique e conheça o RD Station" class="cta-rdstation" target="_blank">Clique e conheça o RD Station</a>',
 				  'logo_url' => get_bloginfo( 'stylesheet_directory' ) . '/images/logo.png',
 				  'logo_link' => get_bloginfo( 'siteurl' ),
 				  'contact_link' => 'http://resultadosdigitais.com.br/contato/',
@@ -85,6 +86,13 @@ function theme_options_do_page() {
 					<td>
 						<textarea id="rd-mkt_theme_options[footer_desc]" class="large-text" cols="40" rows="5" name="rd-mkt_theme_options[footer_desc]" placeholder="<?php esc_attr_e( $default_options['footer_desc'] ); ?>"><?php echo esc_textarea( ($options['options_edited'] != 'true') ? $default_options['footer_desc'] : $options['footer_desc'] ); ?></textarea>
 						<label class="description" for="rd-mkt_theme_options[footer_desc]"><small><?php _e( 'An introduction text about the company or product', 'wptheme-rd-mkt' ); ?></small></label>
+					</td>
+				</tr>
+
+				<tr valign="top"><th scope="row"><?php _e( 'Blog sidebar description', 'wptheme-rd-mkt' ); ?></th>
+					<td>
+						<textarea id="rd-mkt_theme_options[sidebar_desc]" class="large-text" cols="40" rows="5" name="rd-mkt_theme_options[sidebar_desc]" placeholder="<?php esc_attr_e( $default_options['sidebar_desc'] ); ?>"><?php echo esc_textarea( ($options['options_edited'] != 'true') ? $default_options['sidebar_desc'] : $options['sidebar_desc'] ); ?></textarea>
+						<label class="description" for="rd-mkt_theme_options[sidebar_desc]"><small><?php _e( 'An introduction text about the company or product', 'wptheme-rd-mkt' ); ?></small></label>
 					</td>
 				</tr>
 
