@@ -2,7 +2,11 @@
 <?php $curauth = ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var('author_name') ) : get_userdata( get_query_var( 'author' ) ); ?>
 
 		<section id="content">
-			<h1>Posts de "<?php echo $curauth->display_name; ?>"<!-- <a rel="me" href="<?php echo $curauth->jabber; ?>" target="_blank" ><img src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16"></a> --></h1>
+			<h1>Posts de "<?php echo $curauth->display_name; ?>" 
+				<?php if (!empty($curauth->jabber)): ?>
+				<a rel="me" href="<?php echo $curauth->jabber; ?>" target="_blank" ><img src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16"></a>
+				<?php endif; ?>
+			</h1>
 <?php
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$args=array(
