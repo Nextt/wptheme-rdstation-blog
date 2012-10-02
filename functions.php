@@ -244,6 +244,18 @@ window.___gcfg = {lang: "pt-BR"};
 }
 add_action( 'wp_footer', 'gplusone_scrpit' );
 
+// Social Profile Link for users
+function add_social_profile_fields($fields){
+  $fields['jabber'] = __('Google Plus URL');
+  $fields['facebook'] = __('Facebook URL');
+  $fields['twitter'] = __('Twitter URL');
+  return $fields;
+}
+add_filter('user_contactmethods', 'add_social_profile_fields');
+
+
+
+
 function alterar_titulo($titulo) {
   $titulo = attribute_escape($titulo);
   $keywords = array( '#Protected:#', '#Private:#' );
