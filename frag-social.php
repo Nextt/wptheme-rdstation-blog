@@ -11,6 +11,10 @@
 					<?php btn_vert_gplusone(); ?><br />
 					<div class="vspace"></div>
 				<?php endif; ?>
+				<?php if ( function_exists( 'btn_vert_linkedin' ) ) : ?>
+					<?php btn_vert_linkedin(); ?><br />
+					<div class="vspace"></div>
+				<?php endif; ?>
 				<?php if ( function_exists( 'wp_email' ) ) : ?>
 					<?php email_link(); ?><br />
 					<div class="vspace"></div>

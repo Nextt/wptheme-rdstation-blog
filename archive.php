@@ -3,13 +3,30 @@
 		<section id="content">
 			<h1>Posts para <?php wp_title(); ?></h1>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php $curauth = get_userdata( get_the_author_meta('ID'));?> 
 			<article class="post" id="post-<?php the_ID(); ?>">
 
 <?php include (TEMPLATEPATH . '/frag-social.php'); ?>
 
 				<div class="entry">
 					<header>
-						<p class="post-meta"><time><?php the_time( 'j F Y' ); ?></time> | <span class="author">Por <?php the_author_posts_link() ?></span><!-- <a rel="author" href="<?php the_author_meta('jabber'); ?>" target="_blank" ><img src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="12" height="12"></a> --></p>
+						<p class="post-meta">
+							<time><?php the_time( 'j F Y' ); ?></time> | 
+							<span class="author">Por <?php the_author_posts_link() ?></span>
+
+							<?php if (!empty($curauth->twitter)): ?>
+							<a rel="me" href="<?php echo $curauth->twitter; ?>" target="_blank" class="twitter-icon" >&nbsp;</a>
+							<?php endif; ?>
+
+							<?php if (!empty($curauth->facebook)): ?>
+							<a rel="me" href="<?php echo $curauth->facebook; ?>" target="_blank" class="facebook-icon" >&nbsp;</a>
+							<?php endif; ?>
+
+							<?php if (!empty($curauth->jabber)): ?>
+							<a rel="me" href="<?php echo $curauth->jabber; ?>" target="_blank" class="googleplus-icon" >&nbsp;</a>
+							<?php endif; ?>
+						</p>
+
 						<h2><?php if ( !is_single() ) { echo '<a href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php the_title(); ?><?php if ( !is_single() ) { echo '</a>'; } ?></h2>
 					</header>
 					

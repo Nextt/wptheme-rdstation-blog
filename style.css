@@ -39,7 +39,7 @@ article{ overflow: hidden; }
 article.post{ padding: 0 0 50px 80px; }
 article.post+article.post{ border-top: 1px solid #ccc;  padding: 50px 0 50px 80px; }
 
-article.post .post-meta{ font-size: 12px; line-height: 12px; }
+article.post .post-meta{ font-size: 12px; line-height: 24px; }
 article.post  h1{ font-size: 30px; line-height: 30px; margin: 10px 0 20px; }
 article.post  h1 a{ color: #463a33; }
 
@@ -74,10 +74,12 @@ input[type="submit"]:hover { background: #C6553B; }
 #sidebar .rss_icon{ background: url(images/icon-rss.png) no-repeat top left; display: block; font-size: 13px; height: 24px; line-height: 24px;  margin: 0 0 20px 0; text-indent: 30px; }
 #sidebar .rss_icon:hover{ background-position: bottom left; }
 
-footer > .wrapper { position: static; }
-
+#content.author h1 {overflow: hidden; }
+#content.author h1 > span {float:left; margin-right:5px; line-height: 25px;}
+#content.author .facebook-icon, #content.author .twitter-icon, #content.author .googleplus-icon { margin-top:0;}
 
 /* footer */
+footer > .wrapper { position: static; }
 
 footer {background: url('images/bg-home-content.jpg') no-repeat; background-position: center; padding-bottom: 40px; border-top: 3px solid #AE391E;}
 footer .redes-sociais {float: right;}
@@ -90,11 +92,12 @@ footer .box-footer {height: 204px; border-radius: 5px; background: white; width:
 footer .redes-sociais span {display: none;}
 #facebook-widget { padding-top:4px; height: 200px; margin-right: 0;}
 #return-top {margin-top: -22px; margin-left: 0; display: block; background: url('images/bg-volta-topo.png') no-repeat;padding-left: 11px;color: white; text-transform: uppercase; font-size: 9px; line-height: 22px; position: absolute; width: 45px;}
-#twitter {background: url('images/social-sprite.png') 0px 0px no-repeat; height: 26px; width: 25px; display: block; float: left; margin-right: 5px; margin-top: 30px;}
-#twitter:hover{background: url('images/social-sprite.png') 0px -26px no-repeat;}
-#facebook {background: url('images/social-sprite.png') -25px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-right: 5px; margin-top: 30px;}
-#facebook:hover{background: url('images/social-sprite.png') -25px -26px no-repeat;}
-#googleplus {background: url('images/social-sprite.png') -50px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-top: 30px;}
-#googleplus:hover{background: url('images/social-sprite.png') -50px -26px no-repeat;}
+#twitter, .twitter-icon {background: url('images/social-sprite.png') 0px 0px no-repeat; height: 26px; width: 25px; display: block; float: left; margin-right: 5px; margin-top: 30px;}
+#twitter:hover, .twitter-icon:hover {background: url('images/social-sprite.png') 0px -26px no-repeat;}
+#facebook, .facebook-icon {background: url('images/social-sprite.png') -25px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-right: 5px; margin-top: 30px;}
+#facebook:hover, .facebook-icon:hover {background: url('images/social-sprite.png') -25px -26px no-repeat;}
+#googleplus, .googleplus-icon {background: url('images/social-sprite.png') -50px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-top: 30px;}
+#googleplus:hover, .googleplus-icon:hover {background: url('images/social-sprite.png') -50px -26px no-repeat;}
 #rss {background: url('images/social-sprite.png') -75px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-top: 30px; margin-right: 5px;}
 #rss:hover{background: url('images/social-sprite.png') -75px -26px no-repeat;}
+.post-meta > .twitter-icon, .post-meta > .facebook-icon, .post-meta > .googleplus-icon { float: none; display: inline-block; zoom:1; *display: inline;}
