@@ -27,14 +27,22 @@
 					<?php endif; ?>
 				</header>
 
-				<?php if ( function_exists( 'the_post_thumbnail' ) ) the_post_thumbnail( array(250,9999), array( 'class' => ' alignleft' )); ?>
-				<?php the_excerpt(); ?> 
-				<?php if ( !is_single() ) { echo '<a class="read-more" href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php echo "Leia mais"; ?><?php if ( !is_single() ) { echo '</a>'; } ?>
-				<?php if ( is_single() ) : ?>
-				<?php if ( function_exists( 'related_posts' ) ) { related_posts(); } ?>
-				<?php endif; ?>
+<?php 
+				if ( function_exists( 'the_post_thumbnail' ) ) 
+					the_post_thumbnail( array(250,9999), array( 'class' => ' alignright' ));
 
-				<?php if ( the_tags( '<p class="tags">Tags: ', ', ', '</p>' ) ); ?>
+				if ( !is_single() ) :
+					the_excerpt(); 
+				
+				else : 
+					the_content();
+
+					if ( function_exists( 'related_posts' ) )
+						related_posts();
+
+				endif;
+
+				if ( the_tags( '<p class="tags">Tags: ', ', ', '</p>' ) ); ?>
 			</div>
 
 	</article> <!-- end #post-<?php the_ID(); ?> -->
