@@ -21,7 +21,6 @@
 					</p>
 
 					<h1><?php if ( !is_single() ) { echo '<a href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php the_title(); ?><?php if ( !is_single() ) { echo '</a>'; } ?></h1>
-					<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
 					<?php if ( function_exists( 'btn_horz_fblike' ) ) : ?>
 					<?php btn_horz_fblike(); ?>
 					<?php endif; ?>
@@ -43,6 +42,9 @@
 				endif;
 
 				if ( the_tags( '<p class="tags">Tags: ', ', ', '</p>' ) ); ?>
+
+				<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
+
 			</div>
 
 	</article> <!-- end #post-<?php the_ID(); ?> -->
