@@ -43,7 +43,7 @@ article.post .post-meta{ font-size: 12px; line-height: 24px; }
 article.post  h1{ font-size: 30px; line-height: 30px; margin: 10px 0 20px; }
 article.post  h1 a{ color: #463a33; }
 
-article div.social, article div.social_floating {float: left; margin: 0 20px 0 0; width: 60px; margin-left: -80px; }
+article div.social, article div.social_floating {float: left; margin: 65px 20px 0 0; width: 60px; margin-left: -80px; }
 article div.content p {font-size: 14px;}
 article p.categories {font-size: 12px !important; margin-bottom: 20px;}
 article p.categories a {font-weight: bold;}
