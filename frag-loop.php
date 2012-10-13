@@ -21,7 +21,6 @@
 					</p>
 
 					<h1><?php if ( !is_single() ) { echo '<a href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php the_title(); ?><?php if ( !is_single() ) { echo '</a>'; } ?></h1>
-					<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
 					<?php if ( function_exists( 'btn_horz_fblike' ) ) : ?>
 					<?php btn_horz_fblike(); ?>
 					<?php endif; ?>
@@ -32,10 +31,23 @@
 					the_post_thumbnail( array(250,9999), array( 'class' => ' alignright' ));
 
 				if ( !is_single() ) :
-					the_excerpt(); 
+					the_excerpt(); ?>
+					
+					<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
 				
-				else : 
-					the_content();
+<?php			else : 
+					the_content(); ?>
+					
+					<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
+				
+<?php				if ( is_option_setted('webprofile_feedburner') ): ?>
+						<form class="feedburner" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php theme_webprofile_feedburner(); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+							<label>Receba nossos posts em seu e-mail:</label>
+							<input type="text" placeholder="Endereço de email" name="email"/>
+							<input type="submit" value="Assinar" />
+							<input type="hidden" value="<?php theme_webprofile_feedburner(); ?>" name="uri"/><input type="hidden" name="loc" value="pt_BR"/>
+						</form>
+					<?php endif;
 
 					if ( function_exists( 'related_posts' ) )
 						related_posts();
@@ -43,6 +55,8 @@
 				endif;
 
 				if ( the_tags( '<p class="tags">Tags: ', ', ', '</p>' ) ); ?>
+
+
 			</div>
 
 	</article> <!-- end #post-<?php the_ID(); ?> -->
