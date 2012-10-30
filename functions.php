@@ -175,7 +175,7 @@ add_filter('body_class', 'category_id_class');
 // Social share buttons - horizontal
 function btn_horz_tweet() {
   global $post;
-  echo '<a href="http://twitter.com/share" class="twitter-share-button" lang="en" data-count="horizontal" data-url="' . get_permalink($post->ID) . '" data-text="' . get_the_title($post->ID) . '" data-via="' . theme_webprofile_twitter(false) . '">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+  echo '<a href="http://twitter.com/share" class="twitter-share-button" lang="en" data-count="horizontal" data-url="' . get_permalink($post->ID) . '" data-text="' . get_the_title($post->ID) . '" data-via="RD_Station">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
 }
 function btn_horz_fblike() {
   global $post;
@@ -194,7 +194,7 @@ function btn_horz_linkedin() {
 // Social share buttons - vertical
 function btn_vert_tweet() {
   global $post;
-  echo '<a href="http://twitter.com/share" class="twitter-share-button" data-lang="en" data-count="vertical" data-url="' . get_permalink($post->ID) . '" data-text="' . get_the_title($post->ID) . '" data-via="' . theme_webprofile_twitter(false) . '">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+  echo '<a href="http://twitter.com/share" class="twitter-share-button" data-lang="en" data-count="vertical" data-url="' . get_permalink($post->ID) . '" data-text="' . get_the_title($post->ID) . '" data-via="RD_Station">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
 }
 function btn_vert_fblike() {
   global $post;
