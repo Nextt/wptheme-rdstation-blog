@@ -31,7 +31,7 @@
 					the_post_thumbnail( array(250,9999), array( 'class' => ' alignright' ));
 
 				if ( !is_single() ) :
-					the_content(); ?>
+					the_content('Continue lendo &raquo;'); ?>
 					
 					<p class="categories">Categorias: <?php the_category( ', ' ) ?></p>
 				

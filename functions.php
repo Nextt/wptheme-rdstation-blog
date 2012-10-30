@@ -153,7 +153,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 
 // custom excerpt ellipses for 2.9+
 function custom_excerpt_more($more) {
-  return 'Leia mais &raquo;';
+  return 'Continue lendo &raquo;';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 // no more jumping for read more link
