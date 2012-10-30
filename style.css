@@ -98,6 +98,7 @@ color: white;}
 #sidebar h3{ color: #6c6b62; font: 12px/12px Helvetica, Arial, sans-serif; margin: 0 0 15px 0; letter-spacing: 2px; text-transform: uppercase; }
 #sidebar ul{ list-style: none; font-size: 12px; }
 #sidebar ul a{ font-weight: bold; }
+#sidebar ul ul{ margin: 0 0 5px 30px; list-style: disc; }
 
 #sidebar .twitter-follow-button{ margin: 0 0 20px 0; }
 #sidebar .rss_icon{ background: url(images/icon-rss.png) no-repeat top left; display: block; font-size: 13px; height: 24px; line-height: 24px;  margin: 0 0 20px 0; text-indent: 30px; }
