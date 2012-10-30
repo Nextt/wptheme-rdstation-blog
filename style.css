@@ -40,8 +40,9 @@ article.post{ padding: 0 0 50px 80px; }
 article.post+article.post{ border-top: 1px solid #ccc;  padding: 50px 0 50px 80px; }
 
 article.post .post-meta{ font-size: 12px; line-height: 24px; }
-article.post  h1{ font-size: 30px; line-height: 30px; margin: 10px 0 20px; }
-article.post  h1 a{ color: #463a33; }
+article.post h1{ font-size: 30px; line-height: 30px; margin: 10px 0 20px; }
+article.post h1 a{ color: #463a33; }
+article.post .content p a{ text-decoration:underline; }
 
 article div.social, article div.social_floating {float: left; margin: 65px 20px 0 0; width: 60px; margin-left: -80px; }
 article div.content h2, article div.content h3,article div.content h4{ font-size: 18px; font-weight: bold; color: #275a90; margin: 20px 0; }
