@@ -214,7 +214,7 @@ function btn_vert_linkedin() {
 function fb_metatags() {
   global $post;
 
-  $img_url = theme_logo_url(false);
+  $img_url = "http://blog.rdstation.com.br/wp-content/themes/wptheme-rdstation-blog/images/logo-blog.png";
   if (is_single()) {
     if (function_exists('wp_get_attachment_thumb_url') && function_exists('get_post_thumbnail_id') && has_post_thumbnail()) { $img_url =  wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID, 'thum_fb')); }
     $metatags = '<meta property="og:url" content="' . get_permalink($post->ID) . '"/>
