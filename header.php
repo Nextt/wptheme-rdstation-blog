@@ -22,8 +22,9 @@
 	} ?></title>
 
 	<meta http-equiv="imagetoolbar" content="no" />
+	<meta property="fb:page_id" content="216744745124805" /> 
 	<meta property="fb:admins" content="100001304551158" /> 
-	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
+	<meta property="og:site_name" content="Blog RD Station" />
 		
 	<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
 		<link rel="alternate" type="application/rss+xml" title="Feed RSS" href="http://feeds.feedburner.com/<?php theme_webprofile_feedburner(); ?>" />
@@ -39,7 +40,6 @@
 	<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/jquery.float.box.js"></script>
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
-	<!--<link href="http://www.rdstation.com.br/site/css/style.css" rel="stylesheet">-->
 </head>
 <body>
 	<div id="bg-stripe"></div>
