@@ -22,7 +22,7 @@
 	} ?></title>
 
 	<meta http-equiv="imagetoolbar" content="no" />
-	<meta property="fb:admins" content="159732357452275" /> 
+	<meta property="fb:admins" content="100001304551158" /> 
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 		
 	<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
