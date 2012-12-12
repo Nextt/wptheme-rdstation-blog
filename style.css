@@ -130,4 +130,4 @@ footer .redes-sociais span {display: none;}
 #googleplus:hover, .googleplus-icon:hover {background: url('images/social-sprite.png') -50px -26px no-repeat;}
 #rss {background: url('images/social-sprite.png') -75px 0px  no-repeat; height: 26px; width: 25px; display: block; float: left; margin-top: 30px; margin-right: 5px;}
 #rss:hover{background: url('images/social-sprite.png') -75px -26px no-repeat;}
-.post-meta > .twitter-icon, .post-meta > .facebook-icon, .post-meta > .googleplus-icon { float: none; display: inline-block; zoom:1; *display: inline;}
+.post-meta > .twitter-icon, .post-meta > .facebook-icon, .post-meta > .googleplus-icon { text-decoration:none !important; float: none; display: inline-block; zoom:1; *display: inline;}
