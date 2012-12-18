@@ -8,7 +8,7 @@
 
 <?php include (TEMPLATEPATH . '/frag-social.php'); ?>
 
-				<div class="entry">
+				<div class="content">
 					<header>
 						<p class="post-meta">
 							<time><?php the_time( 'j F Y' ); ?></time> | 
@@ -27,7 +27,7 @@
 							<?php endif; ?>
 						</p>
 
-						<h2><?php if ( !is_single() ) { echo '<a href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php the_title(); ?><?php if ( !is_single() ) { echo '</a>'; } ?></h2>
+						<h1><?php if ( !is_single() ) { echo '<a href="'; the_permalink(); echo '" rel="bookmark">'; } ?><?php the_title(); ?><?php if ( !is_single() ) { echo '</a>'; } ?></h1>
 					</header>
 					
 					<?php if ( function_exists( 'the_post_thumbnail' ) ) the_post_thumbnail( array(250,9999), array( 'class' => ' alignleft' )); ?>
