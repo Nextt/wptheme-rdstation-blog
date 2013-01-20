@@ -131,6 +131,10 @@ if ( function_exists('register_sidebar') )
     'before_title' => '<h3>',
     'after_title' => '</h3>',
   ));
+  // The Top Widget For Main Banner
+  register_sidebar(array('name' => 'Estudos de caso',
+    'id' => 'cases-sidebar',
+  ));
 
 // post thumbnail support
 if ( function_exists( 'add_theme_support' ) ) {
@@ -377,4 +381,63 @@ function twentyeleven_comment( $comment, $args, $depth ) {
       break;
   endswitch;
 }
+
 endif; // ends check for twentyeleven_comment()
+
+/* ***************** */
+/* Custom Post-Types */
+/* ***************** */
+
+$labels = array(
+    'name'                          => 'Segmento',
+    'singular_name'                 => 'Segmento',
+    'search_items'                  => 'Procurar segmento',
+    'popular_items'                 => 'Segmentos populares',
+    'all_items'                     => 'Todos segmentos',
+    'parent_item'                   => 'Segmento pai',
+    'edit_item'                     => 'Editar segmento',
+    'update_item'                   => 'Atualizar segmento',
+    'add_new_item'                  => 'Adicionar novo segmento',
+    'new_item_name'                 => 'Novo segmento',
+    'separate_items_with_commas'    => 'Separar segmentos com vírgulas',
+    'add_or_remove_items'           => 'Adicionar ou remover segmentos',
+    'choose_from_most_used'         => 'Escolher entre segmentos mais usados'
+    );
+
+$args = array(
+    'label'                         => 'Segmento',
+    'labels'                        => $labels,
+    'public'                        => true,
+    'hierarchical'                  => true,
+    'show_ui'                       => true,
+    'show_in_nav_menus'             => true,
+    'args'                          => array( 'orderby' => 'term_order' ),
+    'rewrite'                       => array( 'slug' => 'estudos-de-caso/segmentos', 'with_front' => false, 'hierarchical' => true),
+    'query_var'                     => true
+);
+
+register_taxonomy( 'segments', 'cases', $args );
+
+register_post_type( 'cases',
+  array(
+      'labels'                => array(
+          'name'              => __( 'Estudos de caso' ),
+          'singular_name'     => __( 'Estudo de caso' ),
+          'add_new' => _x( 'Adicionar novo', 'cases' ),
+          'add_new_item' => __( 'Adicionar estudo de caso' ),
+          'edit_item' => __( 'Editar estudo de caso' ),
+          'new_item' => __( 'Novo estudo de caso' ),
+          'view_item' => __( 'Ver estudo de caso' ),
+          'search_items' => __( 'Procurar estudos de caso' ),
+          'not_found' =>  __( 'Nenhum estudo de caso encontrado' ),
+          'not_found_in_trash' => __( 'Não há estudos de caso na lixeira' )        
+          ),
+      'public'                => true,
+      'show_ui'               => true,
+      'show_in_menu'          => true,
+      'menu_position'         => 5,
+      'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes' ),
+      'rewrite'               => array( 'slug' => 'estudos-de-caso', 'with_front' => false ),
+      'has_archive'           => true
+  )
+);
