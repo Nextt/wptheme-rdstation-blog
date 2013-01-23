@@ -1,6 +1,6 @@
 <aside id="sidebar" class="cases">
 	<header>
-		<h2>Segmentos</h2>
+		<h2>Estudos de caso</h2>
 	</header>
 	<?php
 
@@ -14,8 +14,8 @@
 		);
 
 	?>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus sit amet massa ornare gravida ac ut eros.</p>
-	<h3>Categorias</h3>
+	<p>Veja aqui como nossos clientes de diversos segmentos vêm obtendo resultados melhores e mais consistentes em Marketing Digital.</p>
+	<h3>Segmentos</h3>
 	<ul>
 		<?php wp_list_categories($args); ?>
 	</ul>
@@ -24,14 +24,6 @@
 	<?php dynamic_sidebar( 'cases-sidebar' ); ?>
 	</ul>
 	<hr />
-	<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
-		<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php theme_webprofile_feedburner(); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-			<label>Receba nossos posts em seu e-mail:</label>
-			<input type="text" placeholder="Endereço de email" name="email"/>
-			<input type="submit" value="Enviar"/>
-			<input type="hidden" value="<?php theme_webprofile_feedburner(); ?>" name="uri"/><input type="hidden" name="loc" value="pt_BR"/>
-		</form>
-	<?php } ?>
 	<?php if ( is_option_setted('webprofile_twitter') ) { ?>
 		<a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" class="twitter-follow-button" data-lang="pt">Siga @<?php theme_webprofile_twitter(); ?></a><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 	<?php } ?>
