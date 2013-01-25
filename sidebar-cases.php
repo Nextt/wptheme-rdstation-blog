@@ -19,19 +19,11 @@
 	<ul>
 		<?php wp_list_categories($args); ?>
 	</ul>
+	<?php if ( is_active_sidebar( 'cases-sidebar' ) ) : ?>
 	<hr />
 	<ul class="widgets">
 	<?php dynamic_sidebar( 'cases-sidebar' ); ?>
-	</ul>
-	<hr />
-	<?php if ( is_option_setted('webprofile_twitter') ) { ?>
-		<a href="http://twitter.com/<?php theme_webprofile_twitter(); ?>" class="twitter-follow-button" data-lang="pt">Siga @<?php theme_webprofile_twitter(); ?></a><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-	<?php } ?>
-	<?php if ( is_option_setted('webprofile_feedburner') ) { ?>
-		<a href="http://feeds.feedburner.com/<?php theme_webprofile_feedburner(); ?>" class="rss_icon" target="_blank">Feed RSS</a>
-	<?php } else { ?>
-		<a href="<?php bloginfo('rss2_url'); ?>" class="rss_icon" target="_blank">Feed RSS</a>
-	<?php } ?>
-
+	</ul>	
+<?php endif; ?>
 
 </aside> <!-- #sidebar -->
