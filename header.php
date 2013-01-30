@@ -7,6 +7,8 @@
 
 	<title><?php if ( is_author() ) {
 			echo 'Posts de &quot;'; wp_title(''); echo '&quot; | '; bloginfo( 'name' );
+		} elseif ( is_post_type_archive( 'cases' ) ){
+			echo 'Estudos de caso de marketing digital';
 		} elseif ( is_category() || is_tag() || is_archive() ) {
 			echo 'Arquivo para &quot;'; single_cat_title(); echo '&quot; | '; bloginfo( 'name' );
 		} elseif ( is_search() ) {
@@ -15,6 +17,8 @@
 			echo 'Erro 404 - Conteúdo não encontrado | '; bloginfo( 'name' );
 		} elseif ( is_home() ) {
 			bloginfo( 'description' ); echo ' | '; bloginfo( 'name' );
+		} elseif (  is_singular( $post_types ) ){
+			wp_title('| estudo de caso de marketing digital', 1, 'right');
 		} elseif ( is_single() ) {
 			wp_title('');
 		} else {
