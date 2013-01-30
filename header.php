@@ -17,7 +17,7 @@
 			echo 'Erro 404 - Conteúdo não encontrado | '; bloginfo( 'name' );
 		} elseif ( is_home() ) {
 			bloginfo( 'description' ); echo ' | '; bloginfo( 'name' );
-		} elseif (  is_singular( $post_types ) ){
+		} elseif (  is_singular( 'cases' ) ){
 			wp_title('| estudo de caso de marketing digital', 1, 'right');
 		} elseif ( is_single() ) {
 			wp_title('');
