@@ -441,3 +441,15 @@ register_post_type( 'cases',
       'has_archive'           => true
   )
 );
+
+add_filter('aioseop_title_single', 'rewrite_cases_page_title');
+function rewrite_cases_page_title( $title ){
+  global $post;
+
+  if ( is_singular( 'cases' ) ){
+    $title = get_post_meta($post->ID, "_aioseop_title", true);
+    $title .= ' | estudo de caso de marketing digital';
+  }
+
+  return $title;
+}
